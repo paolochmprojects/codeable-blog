@@ -146,6 +146,9 @@
   font-family: var(--monospace);
   font-size: var(--font-sm);
   line-height: var(--leading-7);
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
 }
 
 .content pre code {
