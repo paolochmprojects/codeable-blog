@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codificable - Blog: Conoce los elementos básicos de HTML</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body>
+    <div class="pancake-stack">
+      <header class="header container">
+        <h1 class="header__logo"><a href="/index.html">Codificable</a></h1>
+        <nav class="header__navigation navigation">
+          <ul>
+            <li><a href="/blog/index.html">Blog</a></li>
+            <li><a href="/sobre-nosotros.html">Sobre nosotros</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <button class="button button--sm">Login</button>
+        </div>
+        <button class="header__menu-icon button button--icon button--outline">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M2.66663 8H13.3333M2.66663 4H13.3333M2.66663 12H13.3333"
+              stroke="currentColor"
+              stroke-width="1.33"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </header>
+
+      <main>
+        <div class="section">
+          <div class="container">
+            <article class="article" id="article">
+              <div class="article-content">
+                <header class="article__header">
+                  <div class="article-metadata">
+                    <span class="article-metadata__date"
+                      >15 diciembre 2023</span
+                    >
+                    <span class="article-metadata__tag">Principiante</span>
+                  </div>
+                  <div class="author">
+                    <img
+                      src="/assets/images/profile5.jpg"
+                      alt="Hiklief Rodriguez Avatar"
+                      class="author__avatar"
+                    />
+                    <div class="author__info">
+                      <strong class="author_name">Hiklief Rodriguez</strong>
+                      <span>Frontend Developer - Vsale</span>
+                    </div>
+                  </div>
+                </header>
+                <div>
+                  <ul class="article-list">
+                    <li>En este articulo</li>
+                    <li>
+                      <a href="#articlepart1"
+                        >Sintaxis del Elemento &lt;audio&gt;</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#articlepart2"
+                        >Atributos del Elemento &lt;audio&gt;</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#articlepart3"
+                        >Etiqueta &lt;source&gt;para insertar audio</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#articlepart4">Formatos de audio soportados</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="content">
+                  <div>
+                    <div class="audio">
+                      <audio controls>
+                        <source
+                          src="/assets/images/audio1.ogg"
+                          type="Audio/OGG"
+                        />
+                      </audio>
+                    </div>
+                  </div>
+                  <div class="article-image--full">
+                    <img
+                      src="/assets/images/audio-foto.jpg"
+                      alt="corneta de audio"
+                    />
+                  </div>
+                  <h1>Como Usar el Elemento HTML &lt;audio&gt;</h1>
+                  <p>
+                    El elemento HTML &lt;audio&gt; se utiliza para incrustar
+                    contenido de audio en un documento HTML. Este elemento puede
+                    utilizarse para reproducir música, podcasts, audiolibros,
+                    archivos de sonido y otros tipos de contenido de audio.
+                  </p>
+                  <p>
+                    No olvides, entre la etiqueta de apertura y cierre es
+                    recomendable colocar un aviso en texto, este texto se
+                    mostrará en caso el navegador del usuario no sea compatible
+                    o no reconozca dicho elemento de audio.
+                  </p>
+                  <h2 id="articlepart1">Sintaxis del Elemento &lt;audio&gt;</h2>
+                  <p>
+                    La sintaxis básica del elemento
+                    <code>&lt;audio&gt;</code> es la siguiente: <br />
+                    <code>&lt;audio&gt;</code> <code>&lt;/audio&gt;</code>
+                  </p>
+                  <h2 id="articlepart2">
+                    Atributos del Elemento &lt;audio&gt;
+                  </h2>
+                  <p>
+                    Aqui te encontraras con una lista de todos los atributos del
+                    elemento <code>&lt;audio&gt;</code>, junto con una breve
+                    descripción de cada uno:
+                  </p>
+                  <ol>
+                    <li>
+                      <strong>`src`</strong>: Especifica la ubicación del
+                      archivo de audio o la URL del archivo de audio. Este es el
+                      atributo más importante del elemento
+                      <code>&lt;audio&gt;</code>, ya que determina qué archivo
+                      de audio se reproducirá.
+                    </li>
+                    <li>
+                      <strong>controls</strong>: Muestra los controles de
+                      reproducción de audio, como el botón de reproducción, el
+                      botón de pausa, el botón de avance rápido y el botón de
+                      retroceso.
+                    </li>
+                    <li>
+                      <strong>loop</strong>: Hace que el audio se reproduzca en
+                      bucle.
+                    </li>
+                    <li><strong>muted</strong>: Silencia el audio.</li>
+                    <li>
+                      <strong>preload</strong>: Especifica si el audio se
+                      cargará de forma automática o no.
+                    </li>
+                    <li>
+                      <strong>autoplay</strong>: Hace que el audio comience a
+                      reproducirse automáticamente cuando se carga la página.
+                    </li>
+                    <li>
+                      <strong>controlslist</strong>: Especifica qué controles de
+                      reproducción de audio se mostrarán.
+                    </li>
+                    <li>
+                      <strong>mediagroup</strong>: Agrupa varios elementos
+                      <code>&lt;audio&gt;</code> para que se reproduzcan de
+                      forma sincrónica.
+                    </li>
+                    <li>
+                      <strong>preloadend</strong>: Especifica cuánto tiempo de
+                      audio se ha cargado en el navegador.
+                    </li>
+                    <li>
+                      <strong>controlslistend</strong>: Especifica qué controles
+                      de reproducción de audio se mostrarán cuando se haya
+                      cargado la mayor parte del audio.
+                    </li>
+                  </ol>
+                  <p>
+                    Además de estos atributos, el elemento
+                    <code>&lt;audio&gt;</code> también puede heredar todos los
+                    atributos globales de HTML.
+                  </p>
+                  <p>
+                    Aquí hay algunos ejemplos de cómo se pueden utilizar estos
+                    atributos:
+                  </p>
+                  <br />
+                  <ul>
+                    <li>
+                      Para reproducir un archivo de audio llamado "music.mp3" en
+                      bucle, sin controles y sin silenciar:
+                    </li>
+                    <br />
+                    <pre><code>&lt;audio src="music.mp3" loop muted controls/&gt;</code></pre>
+                    <li>
+                      Para reproducir un archivo de audio llamado "podcast.ogg"
+                      de forma automática:
+                    </li>
+                    <br />
+                    <pre><code>&lt;audio src="podcast.ogg" autoplay/&gt;</code></pre>
+                    <li>
+                      Para reproducir varios archivos de audio de forma
+                      sincrónica, agrupados en un grupo llamado
+                      "my-audio-group":
+                    </li>
+                    <br />
+                    <pre>
+      &lt;audio src="audio1.mp3" controls&gt;
+       &lt;audio src="audio2.mp3" controls&gt;
+       &lt;audio src="audio3.mp3" controls&gt;</pre>
+                  </ul>
+                  <h2 id="articlepart3">
+                    Etiqueta &lt;source&gt;para insertar audio
+                  </h2>
+                  <p>
+                    Otra manera de insertar elementos de audio es utilizando la
+                    etiqueta <code>&lt;source&gt;</code>dentro de una
+                    <code>&lt;audio&gt;</code>,dentro de ella se especifica cual
+                    es el archivo mediante el atributo`src`y además se puede
+                    especificar el tipo de archivo utilizando el atributo
+                    `type.`Veamos un ejemplo acontinuacion.
+                  </p>
+                  <pre>&lt;audio controls&gt;
+  &lt;source src="miaudio.mp3" type="audio/mp3"&gt;
+  Este es un elemento de audio no soportado por 
+  tu navegador prueba con otro
+&lt;/audio&gt;
+                    </pre
+                  >
+                  <h2 id="articlepart4">Formatos de audio soportados</h2>
+                  <p>
+                    No todos los formatos de audio que existen se pueden
+                    utilizar para insertar en una página web, en esta ocasión
+                    conoceremos los formatos más recomendables.
+                  </p>
+                  <ul>
+                    <li>MP3</li>
+                    <li>OGG</li>
+                    <li>WAV</li>
+                    <li>AAC</li>
+                    <li>OPUS</li>
+                  </ul>
+                  <div class="blockquote-container">
+                    <blockquote class="blockquote text-center">
+                      <p>
+                        ¡Fantástico! ¿Verdad?,En este artículo hemos aprendido
+                        cómo insertar audio en una página web con HTML. El
+                        elemento <code>&lt;audio&gt;</code> es una forma
+                        sencilla de agregar contenido de audio a tus páginas
+                        web.
+                      </p>
+                      <footer class="pie-cita">
+                        <cite>
+                          <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio"
+                            >Documentación oficial de HTML</a
+                          >
+                        </cite>
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <a class="button-up button-up__sticky" href="#article">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M15 12.5L10 7.5L5 12.5"
+                  stroke="#171717"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              top</a
+            >
+          </div>
+        </div>
+      </main>
+
+      <footer class="container footer">
+        <ul class="footer-links">
+          <li><a href="">Link 1</a></li>
+          <li><a href="">Link 2</a></li>
+          <li><a href="">Link 3</a></li>
+          <li><a href="">Link 4</a></li>
+          <li><a href="">Link 5</a></li>
+        </ul>
+        <ul class="social-links">
+          <li>
+            <a href="https://www.facebook.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="facebook">
+                  <path
+                    id="Vector"
+                    d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="linkedin">
+                  <path
+                    id="Vector"
+                    d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector_2"
+                    d="M6 9H2V21H6V9Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector_3"
+                    d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="twitter">
+                  <path
+                    id="Vector"
+                    d="M22 4.00002C22 4.00002 21.3 6.10002 20 7.40002C21.6 17.4 10.6 24.7 2 19C4.2 19.1 6.4 18.4 8 17C3 15.5 0.5 9.60002 3 5.00002C5.2 7.60002 8.6 9.10002 12 9.00002C11.1 4.80002 16 2.40002 19 5.20002C20.1 5.20002 22 4.00002 22 4.00002Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.github.com/" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="github">
+                  <path
+                    id="Vector"
+                    d="M15 22V18C15.1392 16.7473 14.78 15.4901 14 14.5C17 14.5 20 12.5 20 9C20.08 7.75 19.73 6.52 19 5.5C19.28 4.35 19.28 3.15 19 2C19 2 18 2 16 3.5C13.36 3 10.64 3 8.00004 3.5C6.00004 2 5.00004 2 5.00004 2C4.70004 3.15 4.70004 4.35 5.00004 5.5C4.27191 6.51588 3.91851 7.75279 4.00004 9C4.00004 12.5 7.00004 14.5 10 14.5C9.61004 14.99 9.32004 15.55 9.15004 16.15C8.98004 16.75 8.93004 17.38 9.00004 18V22"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector_2"
+                    d="M9 18C4.49 20 4 16 2 16"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <small class="footer__text"
+          >&copy; 2023 Codificable - Todos los derechos reservados</small
+        >
+      </footer>
+    </div>
+  </body>
+</html>

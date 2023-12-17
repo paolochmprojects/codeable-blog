@@ -1,0 +1,44 @@
+/* 
+<a href="#" class="link link--branded">
+  Link Text
+  <svg>..</svg>
+</a>
+*/
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--foreground);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  line-height: var(--leading-6);
+  text-decoration: none;
+}
+
+/* .link:hover {
+  text-decoration: underline;
+} */
+
+.link--branded {
+  color: var(--primary);
+  position: relative;
+  text-decoration: none;
+}
+
+.link--branded::after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+width: 0;
+height: 3px;
+background-color: var(--primary);
+transition: width 0.4s;
+}
+
+.link--branded:hover::after {
+width: 100%;
+}

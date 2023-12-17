@@ -1,0 +1,127 @@
+.form-join {
+  max-width: var(--width-2xl);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-8);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.form-field input,
+.form-field select {
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--rounded-md);
+  border: 1px solid var(--border);
+  background: var(--background);
+  color: var(--foreground);
+  width: 100%;
+  display: block;
+}
+
+.form-field small {
+  font-family: var(--text);
+  font-weight: 400;
+  font-size: var(--font-sm);
+  color: var(--muted-foreground);
+  line-height: 20px;
+}
+
+.form-field input[type="file"]::file-selector-button {
+  padding: var(--spacing-1) var(--spacing-2);
+  background-color: var(--background);
+  color: var(--foreground);
+  border: 0;
+}
+
+.radio-group {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.radio-group legend {
+  margin-bottom: var(--spacing-2);
+}
+
+.radio__item {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.radio__item input {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 0;
+  border-radius: 0;
+  background-image: url("/assets/icons/form-radio.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.radio__item input:checked {
+  background-image: url("/assets/icons/form-radio-check.svg");
+}
+
+.checkbox-group {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.checkbox-group legend {
+  margin-bottom: var(--spacing-2);
+}
+
+.checkbox__item {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.checkbox__item input {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 0;
+  border-radius: 0;
+  background-image: url("/assets/icons/form-checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox__item input:checked {
+  background-image: url("/assets/icons/form-checkbox-check.svg");
+}
+
+.form-field--2fr {
+  grid-column: span 2;
+}
+
+.form-field label {
+  color: var(--foreground);
+  font-family: var(--text);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  line-height: var(--leading-4);
+  padding-bottom: var(--spacing-2);
+}
+
+/*modo tablet 
+@media (max-width: 48rem){
+    
+}*/
+
+@media (max-width: 40rem) {
+  .form-join {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .form-field--2fr {
+    grid-column: span 1;
+  }
+}
